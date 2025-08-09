@@ -15,7 +15,7 @@ const COMPANY_INFO = {
   instagram: "https://www.instagram.com/qatar_plumber_123?igsh=ZTB2M2Q0MGxrYm0=",
   whatsapp: "https://wa.me/97477188527",
   phone: "+97477188527",
-  email: "info.qpem@gmail.com",
+  email: "info.qatarservices@gmail.com",
 };
 
 const ContactBubble = () => {
@@ -57,7 +57,8 @@ const ContactBubble = () => {
     <>
       {/* Contact Icons - Right Side */}
       <motion.div
-        className="fixed bottom-5 right-5 flex flex-col items-center space-y-4 z-50"
+        className="fixed bottom-5 right-5 flex flex-col items-center space-y-4 z-50 font-sans"
+        style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.4 }}
@@ -69,7 +70,7 @@ const ContactBubble = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
-            className="text-blue-700 hover:text-blue-900 transition-colors"
+            className="text-[#004d40] hover:text-[#00251a] transition-colors"
           >
             <FaFacebook size={iconSize} />
           </a>
@@ -78,7 +79,7 @@ const ContactBubble = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className="text-pink-600 hover:text-pink-800 transition-colors"
+            className="text-[#d81b60] hover:text-[#8b0f3a] transition-colors"
           >
             <FaInstagram size={iconSize} />
           </a>
@@ -90,7 +91,8 @@ const ContactBubble = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="WhatsApp"
-          className="bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-md transition"
+          className="bg-[#2e7d32] hover:bg-[#1b4f1b] text-white p-3 rounded-full shadow-lg transition"
+          title="WhatsApp: +974 77188527"
         >
           <FaWhatsapp size={iconSize} />
         </a>
@@ -99,7 +101,8 @@ const ContactBubble = () => {
         <a
           href={`tel:${COMPANY_INFO.phone}`}
           aria-label="Phone"
-          className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-md transition"
+          className="bg-[#00796b] hover:bg-[#004d40] text-white p-3 rounded-full shadow-lg transition"
+          title="Call Us: +974 77188527"
         >
           <FaPhoneAlt size={iconSize} />
         </a>
@@ -108,7 +111,8 @@ const ContactBubble = () => {
         <a
           href={`mailto:${COMPANY_INFO.email}`}
           aria-label="Email"
-          className="bg-red-500 hover:bg-red-600 text-white p-3 rounded-full shadow-md transition"
+          className="bg-[#c62828] hover:bg-[#7f1d1d] text-white p-3 rounded-full shadow-lg transition"
+          title="Email: info.qatarservices@gmail.com"
         >
           <FaEnvelope size={iconSize} />
         </a>
@@ -124,7 +128,8 @@ const ContactBubble = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             whileHover={{ scale: 1.1 }}
-            className="fixed bottom-20 left-5 bg-gray-800 text-white p-3 rounded-full shadow-md transition"
+            className="fixed bottom-20 left-5 bg-[#004d40] text-white p-3 rounded-full shadow-md transition"
+            title="Scroll to Top"
           >
             <FaArrowUp size={20} />
           </motion.button>
@@ -140,7 +145,8 @@ const ContactBubble = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             whileHover={{ scale: 1.1 }}
-            className="fixed bottom-16 left-5 bg-gray-800 text-white p-3 rounded-full shadow-md transition"
+            className="fixed bottom-16 left-5 bg-[#004d40] text-white p-3 rounded-full shadow-md transition"
+            title="Scroll to Bottom"
           >
             <FaArrowDown size={20} />
           </motion.button>
