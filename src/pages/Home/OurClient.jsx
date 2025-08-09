@@ -22,45 +22,46 @@ const OurClient = () => {
   ];
 
   const items = logos.map((logo, index) => (
-    <div key={index} className="flex justify-center items-center p-2">
+    <div key={index} className="flex justify-center items-center p-3">
       <img
         src={logo.src}
         alt={logo.alt}
-        className="w-36 h-20 object-contain rounded-md shadow hover:scale-105 transition-transform duration-300"
+        className="w-36 h-20 object-contain rounded-md shadow-md hover:scale-105 transition-transform duration-300"
       />
     </div>
   ));
 
   return (
-    <section className="py-14 bg-[#FDF9F2] dark:bg-gray-900 text-gray-800 dark:text-white">
-      <div className="container px-6 mx-auto text-center max-w-7xl">
+    <section className="py-16 bg-gradient-to-b from-[#E3F6F5] to-[#C9F0EC] dark:bg-gray-900 text-[#044D59] dark:text-gray-200 font-sans">
+      <div className="container px-6 mx-auto max-w-7xl text-center">
         {/* Header */}
-        <h2 className="text-4xl font-bold text-[#1E2A3A] dark:text-white mb-4">
-          Our Esteemed Clients
+        <h2 className="text-4xl font-extrabold mb-3 tracking-tight text-[#016C74] dark:text-emerald-400">
+          Trusted by Our Valued Clients
         </h2>
-        <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-           F L M SUPER TRADING AND CONTRACTING – Delivering expert solutions across Qatar.
+        <p className="text-lg max-w-3xl mx-auto text-[#05575B] dark:text-gray-300 mb-10 leading-relaxed">
+          Qatar Plumbing, Electrical & Maintenance — Delivering expert plumbing, electrical, appliance repair, and general maintenance solutions throughout Qatar with professionalism and care.
         </p>
 
         {/* Carousel */}
-        <div className="mt-10">
-          <AliceCarousel
-            autoPlay
-            autoPlayInterval={2000}
-            infinite
-            mouseTracking
-            disableButtonsControls
-            disableDotsControls
-            items={items}
-            responsive={{
-              0: { items: 2 },
-              640: { items: 3 },
-              768: { items: 4 },
-              1024: { items: 5 },
-              1280: { items: 6 },
-            }}
-          />
-        </div>
+        <AliceCarousel
+          autoPlay
+          autoPlayInterval={2200}
+          infinite
+          mouseTracking
+          disableButtonsControls
+          disableDotsControls
+          items={items}
+          responsive={{
+            0: { items: 2 },
+            640: { items: 3 },
+            768: { items: 4 },
+            1024: { items: 5 },
+            1280: { items: 6 },
+          }}
+          animationDuration={900}
+          animationType="slide"
+          touchTracking
+        />
       </div>
     </section>
   );

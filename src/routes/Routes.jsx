@@ -4,7 +4,6 @@ import { createBrowserRouter } from "react-router-dom";
 
 // Layout
 import Main from "../layouts/Main";
-import ErrorPage from "../pages/errorPage/ErrorPage";
 
 // Core Pages
 import Home from "../pages/Home/Home";
@@ -16,17 +15,14 @@ import Terms from "../pages/terms/Terms";
 import BlogPage from "../pages/blogs/BlogPage";
 import PortfolioPage from "../pages/portfolio/PortfolioPage";
 import Gallery from "../pages/Gallery";
+import ErrorPage from "../pages/errorPage/ErrorPage";
 
-// FLM Services Pages
-import Aluminium from "../flmServices/Aluminium";
-import Glass from "../flmServices/Glass";
-import Furniture from "../flmServices/Furniture";
-import MS from "../flmServices/MS";
-import UPVC from "../flmServices/UPVC";
-import Parking from "../flmServices/Parking";
-import Services from "../flmServices/Services";
-import Gypsum from "../flmServices/Gypsum";
-import Printing from "../flmServices/Printing";
+// QPEM Service Pages
+import OurServices from "../QPEM/OurServices";
+import Plumbing from "../QPEM/plumbing";
+import Electrical from "../QPEM/electrical";
+import Appliance from "../QPEM/appliance";
+import Maintenance from "../QPEM/maintenance";
 
 // Router Configuration
 const router = createBrowserRouter([
@@ -39,7 +35,7 @@ const router = createBrowserRouter([
     ),
     errorElement: <ErrorPage />,
     children: [
-      // Main Pages
+      // Main Website Pages
       { path: "/", element: <Home /> },
       { path: "/service", element: <ServicePage /> },
       { path: "/gallery", element: <Gallery /> },
@@ -50,22 +46,16 @@ const router = createBrowserRouter([
       { path: "/faq", element: <FaqPage /> },
       { path: "/terms", element: <Terms /> },
 
-      // FLM Services Categories
-      { path: "/services", element: <Services /> },
-      { path: "/services/aluminium", element: <Aluminium /> },
-      { path: "/services/glass", element: <Glass /> },
-      { path: "/services/gypsumCeilings", element: <Gypsum /> },
-         { path: "/services/printing", element: <Printing /> },
-      { path: "/services/parking", element: <Parking /> },
-      { path: "/services/upvc", element: <UPVC /> },
-      { path: "/services/ms_fabrication", element: <MS /> },
-
-      
-      { path: "/furniture", element: <Furniture /> },
+      // QPEM Services Overview & Categories
+      { path: "/services", element: <OurServices /> },
+      { path: "/services/plumbing", element: <Plumbing /> },
+      { path: "/services/electrical", element: <Electrical /> },
+      { path: "/services/appliance", element: <Appliance /> },
+      { path: "/services/maintenance", element: <Maintenance /> },
     ],
   },
 
-  // Catch-all 404 Page
+  // 404 Not Found Route
   {
     path: "*",
     element: <ErrorPage />,

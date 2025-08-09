@@ -1,55 +1,50 @@
 import React from "react";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const features = [
   {
-    title: "Aluminium Fabrication",
-    description: "Precision aluminium structures and installations, combining strength with sleek design for residential and commercial projects.",
-    image: "https://8upload.com/image/6886c100e5eab/IMG-20250630-WA0008.jpg",
+    title: "Plumbing Services",
+    description:
+      "Expert plumbing solutions for homes and businesses — from leak repairs to complete piping installations, done right the first time.",
+    image: "https://8upload.com/image/68971aa90ada0/Plumber_9.jpg",
+    link: "/services/plumbing",
   },
   {
-    title: "Glass & Mirror Works",
-    description: "Stylish glass panels and custom mirrors to elevate interiors with clarity, modern appeal, and lasting durability.",
-    image: "https://8upload.com/image/6886c3b55931a/IMG-20250630-WA0040.jpg",
+    title: "Electrical Services",
+    description:
+      "Safe, reliable electrical installations and repairs for residential and commercial projects across Doha and Qatar.",
+    image: "https://8upload.com/image/68971adcb8464/Electrician_7.jpg",
+    link: "/services/electrical",
   },
   {
-    title: "Gypsum Partition & Ceiling",
-    description: "Innovative false ceilings and space-defining partitions, designed to enhance acoustics, aesthetics, and flexibility.",
-    image: "https://8upload.com/image/6886c41c28e59/IMG-20250630-WA0075.jpg",
+    title: "Appliance Repairs",
+    description:
+      "Quick and professional repair of all household and commercial appliances — ensuring smooth and efficient operation.",
+    image: "https://8upload.com/image/68971b6746329/Hero_18.jpg",
+    link: "/services/appliance",
   },
   {
-    title: "Printing Services",
-    description: "From business signage to promotional materials, our custom printing delivers bold, high-quality results.",
-    image: "https://8upload.com/image/6886c52ae53e6/IMG-20250630-WA0080.jpg",
-  },
-  {
-    title: "Parking Shade Structures",
-    description: "UV-protected, heat-resistant shade solutions engineered for residential, commercial, and industrial parking zones.",
-    image: "https://8upload.com/image/6886c5b74c017/IMG-20250630-WA0110.jpg",
-  },
-  {
-    title: "UPVC Doors & Windows",
-    description: "Energy-efficient, weatherproof, and stylish UPVC systems designed to enhance comfort and modern living.",
-    image: "https://8upload.com/image/6886c5ea578f5/IMG-20250630-WA0055.jpg",
-  },
-  {
-    title: "MS Welding & Furniture Upholstery",
-    description: "From strong steel fabrication to plush furniture finishes—F L M delivers craftsmanship across industries.",
-    image: "https://8upload.com/image/6886c6120d9d1/IMG-20250630-WA0073.jpg",
+    title: "General Maintenance",
+    description:
+      "Comprehensive property maintenance to keep your space functional, safe, and looking its best all year round.",
+    image: "https://8upload.com/image/68971ba5d982b/maintenance_10.jpg",
+    link: "/services/maintenance",
   },
 ];
 
 const sliderSettings = {
   dots: true,
   infinite: true,
-  speed: 1000,
+  speed: 800,
   slidesToShow: 2,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 4500,
+  autoplaySpeed: 4000,
   arrows: false,
+  pauseOnHover: false, // Important to keep autoplay running on hover
   responsive: [
     { breakpoint: 1024, settings: { slidesToShow: 2 } },
     { breakpoint: 768, settings: { slidesToShow: 1 } },
@@ -58,49 +53,60 @@ const sliderSettings = {
 
 const WhyChoose = () => {
   return (
-    <section className="px-6 py-12 lg:py-20 bg-[#F3FDF8] dark:bg-gray-900 text-gray-800 dark:text-white font-sans">
+    <section className="px-6 py-12 lg:py-20 bg-[#F5FAFF] dark:bg-gray-900 text-gray-800 dark:text-white font-sans">
       {/* Logo */}
       <div className="flex justify-center mb-10">
         <img
           src="https://8upload.com/image/6886bfe4749c0/Screenshot_at_Jul_28_02-58-35.png"
-          alt="F L M Logo"
-          className="h-24 w-24 rounded-xl shadow-xl border-4 border-emerald-600"
+          alt="Qatar Plumbing, Electrical & Maintenance Logo"
+          className="h-24 w-24 rounded-xl shadow-xl border-4 border-[#007B8F]"
         />
       </div>
 
       {/* Heading */}
       <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="text-4xl font-bold mb-4 text-emerald-800 dark:text-white">
-          Why Choose <span className="text-emerald-600">F L M SUPER TRADING AND CONTRACTING</span>?
+        <h2 className="text-4xl font-bold mb-4 text-[#004E5E] dark:text-white">
+          Why Choose{" "}
+          <span className="text-[#007B8F]">
+            Qatar Plumbing, Electrical & Maintenance
+          </span>
+          ?
         </h2>
         <p className="text-lg text-gray-700 dark:text-gray-300">
-          We provide versatile solutions for aluminium, glass, gypsum, printing, shade, UPVC, welding, and upholstery—combining innovation, quality, and reliability.
+          Your trusted partner in plumbing, electrical, appliance repairs, and
+          general maintenance across Qatar. We deliver quality, safety, and
+          efficiency — every time.
         </p>
       </div>
 
       {/* Slider */}
       <div className="max-w-6xl mx-auto">
         <Slider {...sliderSettings}>
-          {features.map((feature, index) => (
-            <div key={index} className="px-4">
-              <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2 duration-300 text-center">
+          {features.map(({ title, description, image, link }, index) => (
+            <Link
+              key={index}
+              to={link}
+              className="px-4 focus:outline-none"
+              tabIndex={0}
+            >
+              <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2 duration-300 text-center cursor-pointer h-full flex flex-col">
                 <div className="flex justify-center mb-5">
-                  <div className="w-24 h-24 rounded-full bg-[#E6F7F1] dark:bg-emerald-800 flex items-center justify-center shadow-inner">
+                  <div className="w-24 h-24 rounded-full bg-[#E0F7FA] dark:bg-[#005B6A] flex items-center justify-center shadow-inner mx-auto">
                     <img
-                      src={feature.image}
-                      alt={feature.title}
-                      className="h-20 w-20 object-contain"
+                      src={image}
+                      alt={title}
+                      className="h-20 w-20 object-contain rounded-full"
                     />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-emerald-800 dark:text-white mb-2">
-                  {feature.title}
+                <h3 className="text-xl font-semibold text-[#007B8F] dark:text-white mb-2">
+                  {title}
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  {feature.description}
+                <p className="text-sm text-gray-600 dark:text-gray-400 flex-grow">
+                  {description}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </Slider>
       </div>

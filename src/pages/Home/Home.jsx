@@ -8,26 +8,27 @@ import WhyChoose from "./WhyChoose";
 import OurClient from "./OurClient";
 import CustomerReviews from "./CustomerReviews";
 import SubscreibeContact from "../contact/SubscreibeContact";
-import Products_FLM from "./Products_FLM";
+import Services_QPEM from "./Services_QPEM";
 
 const container = {
   hidden: {},
   visible: {
     transition: {
       staggerChildren: 0.18,
+      delayChildren: 0.2,
     },
   },
 };
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 25 },
   visible: (custom = 0) => ({
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
-      ease: "easeOut",
-      delay: custom * 0.1,
+      duration: 0.65,
+      ease: [0.4, 0, 0.2, 1],
+      delay: custom * 0.12,
     },
   }),
 };
@@ -36,123 +37,138 @@ const Home = () => {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <div className="home-page px-4 sm:px-6 md:px-8 max-w-7xl mx-auto text-gray-800">
-      <PageTitle title="F L M Super Trading and Contracting | Aluminium, Gypsum, Upholstery, and More" />
+    <div
+      className="home-page px-4 sm:px-6 md:px-8 max-w-7xl mx-auto text-slate-900 font-sans"
+      style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
+    >
+      {/* SEO Title */}
+      <PageTitle title="Qatar Plumbing, Electrical & Maintenance | Trusted Services in Doha" />
 
-      {/* Hero */}
+      {/* Hero Banner */}
       <motion.section
         aria-label="Hero banner"
         className="hero-slider"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.6 }}
         variants={shouldReduceMotion ? {} : fadeUp}
       >
         <HeroSlider />
       </motion.section>
 
-      {/* Core Services */}
+      {/* Services Section */}
       <motion.section
         className="services-section my-16 sm:my-20"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.6 }}
         variants={shouldReduceMotion ? {} : container}
         aria-label="Core services offered"
       >
         <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-center mb-4 text-emerald-700"
+          className="text-3xl sm:text-4xl font-extrabold text-center mb-5 text-[#005f66]"
           variants={shouldReduceMotion ? {} : fadeUp}
         >
-          Our Core Services
+          Reliable Home & Office Services in Qatar
         </motion.h2>
         <motion.p
-          className="text-center max-w-3xl mx-auto text-gray-600 mb-10 leading-relaxed px-2 sm:px-0"
+          className="text-center max-w-3xl mx-auto text-gray-700 dark:text-gray-400 mb-12 leading-relaxed px-4 sm:px-0"
           variants={shouldReduceMotion ? {} : fadeUp}
         >
-          F L M Super Trading and Contracting delivers comprehensive contracting solutions across Qatar: aluminium fabrication & installation, glass & mirror works, gypsum partitioning & ceilings, printing, parking shade structures, UPVC doors & windows, MS welding & steel fabrication, and furniture & upholstery. Tailored. Reliable. Professional.
+          We specialize in Plumbing, Electrical, Appliance Repairs, and General
+          Maintenance across Doha. Affordable, fast, and professional — QPEM
+          delivers trusted, all-in-one solutions for your home and business.
         </motion.p>
         <motion.div variants={shouldReduceMotion ? {} : fadeUp}>
-          <Products_FLM />
+          <Services_QPEM />
         </motion.div>
       </motion.section>
 
-      {/* Why Choose */}
+      {/* Why Choose Us */}
       <motion.section
         className="why-choose-us my-16 sm:my-20"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.6 }}
         variants={shouldReduceMotion ? {} : container}
         aria-label="Why choose us"
       >
         <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-center mb-4 text-emerald-700"
+          className="text-3xl sm:text-4xl font-extrabold text-center mb-5 text-[#005f66]"
           variants={shouldReduceMotion ? {} : fadeUp}
         >
-          Why Choose F L M Super Trading and Contracting?
+          Why Choose QPEM?
         </motion.h2>
         <motion.p
-          className="text-center max-w-3xl mx-auto text-gray-600 mb-10 leading-relaxed px-4 sm:px-0"
+          className="text-center max-w-3xl mx-auto text-gray-700 dark:text-gray-400 mb-12 leading-relaxed px-4 sm:px-0"
           variants={shouldReduceMotion ? {} : fadeUp}
         >
-          Backed by experienced professionals, industry-grade materials, and a commitment to timely delivery, we craft solutions that stand the test of time and delight clients across residential, commercial, and industrial sectors.
+          Trusted throughout Qatar, we provide rapid response, certified
+          technicians, transparent pricing, and guaranteed satisfaction.
+          Excellence and reliability define everything we do.
         </motion.p>
         <motion.div variants={shouldReduceMotion ? {} : fadeUp}>
           <WhyChoose />
         </motion.div>
       </motion.section>
 
-      {/* Clients */}
+      {/* Our Clients */}
       <motion.section
         className="our-clients my-16 sm:my-20"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.6 }}
         variants={shouldReduceMotion ? {} : container}
         aria-label="Our clients"
       >
         <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-center mb-6 text-emerald-700"
+          className="text-3xl sm:text-4xl font-extrabold text-center mb-8 text-[#005f66]"
           variants={shouldReduceMotion ? {} : fadeUp}
         >
-          Trusted by Leading Clients
+          Proudly Serving Clients in Qatar
         </motion.h2>
         <motion.div variants={shouldReduceMotion ? {} : fadeUp}>
           <OurClient />
         </motion.div>
       </motion.section>
 
-      {/* Testimonials */}
+      {/* Reviews */}
       <motion.section
         className="customer-reviews my-16 sm:my-20"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.6 }}
         variants={shouldReduceMotion ? {} : container}
         aria-label="Customer reviews"
       >
         <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-center mb-6 text-emerald-700"
+          className="text-3xl sm:text-4xl font-extrabold text-center mb-8 text-[#005f66]"
           variants={shouldReduceMotion ? {} : fadeUp}
         >
-          What Our Clients Say
+          What Our Customers Say
         </motion.h2>
         <motion.div variants={shouldReduceMotion ? {} : fadeUp}>
           <CustomerReviews />
         </motion.div>
       </motion.section>
 
-      {/* Contact / Newsletter */}
+      {/* Contact Section */}
       <motion.section
         className="subscribe-contact my-16 sm:my-20"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.6 }}
         variants={shouldReduceMotion ? {} : fadeUp}
         aria-label="Contact and newsletter"
       >
-        <SubscreibeContact />
+        <SubscreibeContact
+          location="Zone 26, 850 Monsoura Street, Doha - Qatar"
+          phone="+974 77188527"
+          whatsapp="https://wa.me/97477188527"
+          email="info.qatarservices@gmail.com"
+          instagram="https://www.instagram.com/qatar_plumber_123?igsh=ZTB2M2Q0MGxrYm0="
+          facebook="https://www.facebook.com/share/1FrURQRnNv/"
+        />
       </motion.section>
     </div>
   );

@@ -11,11 +11,11 @@ import React, { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const COMPANY_INFO = {
-  facebook: "https://www.facebook.com/share/1Ez4QhtfFn/",
-  instagram: "https://www.instagram.com/mobarakmunna/profilecard/?igsh=MXYwMXdhdDhqNnRjOQ==",
-  whatsapp: "https://wa.me/97431602956",
-  phone: "+97431602956",
-  email: "mobarakhossain23456@gmail.com",
+  facebook: "https://www.facebook.com/share/1FrURQRnNv/",
+  instagram: "https://www.instagram.com/qatar_plumber_123?igsh=ZTB2M2Q0MGxrYm0=",
+  whatsapp: "https://wa.me/97477188527",
+  phone: "+97477188527",
+  email: "info.qpem@gmail.com",
 };
 
 const ContactBubble = () => {

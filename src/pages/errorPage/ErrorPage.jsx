@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
 import PageTitle from "../reusable/PageTitle";
 import { motion } from "framer-motion";
-import { FaArrowRight, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaFacebook, FaInstagram } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaFacebook,
+  FaInstagram,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const ErrorPage = () => {
   return (
@@ -9,9 +17,9 @@ const ErrorPage = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="bg-gradient-to-br from-white via-[#f0f3f6] to-[#e8ecef] min-h-screen flex items-center justify-center px-6 py-16"
+      className="bg-gradient-to-br from-white via-slate-100 to-slate-200 min-h-screen flex items-center justify-center px-6 py-16"
     >
-      <PageTitle title="F L M SUPER TRADING AND CONTRACTING | Page Not Found" />
+      <PageTitle title="Qatar Plumbing, Electrical & Maintenance | Page Not Found" />
 
       <motion.div
         initial={{ y: 40, opacity: 0 }}
@@ -24,7 +32,7 @@ const ErrorPage = () => {
         <div className="w-full md:w-1/2">
           <img
             src="https://i.ibb.co/r03Pv6N/6342464-min.jpg"
-            alt="F L M SUPER TRADING AND CONTRACTING - Page Not Found"
+            alt="QPEM - Page Not Found"
             className="w-full h-auto drop-shadow-lg rounded-xl"
             loading="lazy"
           />
@@ -49,62 +57,60 @@ const ErrorPage = () => {
               </Link>
             </div>
 
-            {/* Company Snapshot */}
-            <div className="mt-8 bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
-                F L M SUPER TRADING AND CONTRACTING
+            {/* Company Info */}
+            <div className="mt-8 bg-gray-50 p-5 rounded-lg border border-gray-200 shadow-inner">
+              <h2 className="text-lg font-semibold text-gray-800">
+                Qatar Plumbing, Electrical & Maintenance (QPEM)
               </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">
-                Arabic: اف ال ام سوبر ترادينغ اند كونتراكتينغ
+              <p className="text-sm text-gray-600 mb-1">
+                Your trusted maintenance partner in Qatar.
               </p>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-                CR No.: 212381 &nbsp;|&nbsp; Rokcha No.: 289601
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3 text-sm text-gray-700">
                 <div className="flex items-center gap-2">
-                  <FaPhoneAlt /> <span>31602956</span>
+                  <FaPhoneAlt className="text-emerald-600" />{" "}
+                  <span>+974 7718 8527</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <FaMapMarkerAlt />{" "}
-                  <span>
-                    Zone 26, Street 850, Building 45, Flat 2, Apartment No. 5
-                  </span>
+                  <FaWhatsapp className="text-green-500" />{" "}
+                  <span>+974 7718 8527</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <FaEnvelope /> <span>mobarakhossain23456@gmail.com</span>
+                  <FaEnvelope className="text-emerald-600" />{" "}
+                  <span>info.qpem@gmail.com</span>
                 </div>
-                <div className="flex items-center gap-4">
-                  <a
-                    href="https://www.facebook.com/share/1Ez4QhtfFn/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                    className="flex items-center gap-1 hover:text-emerald-600"
-                  >
-                    <FaFacebook /> Facebook
-                  </a>
-                  <a
-                    href="https://www.instagram.com/mobarakmunna/profilecard/?igsh=MXYwMXdhdDhqNnRjOQ=="
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    className="flex items-center gap-1 hover:text-emerald-600"
-                  >
-                    <FaInstagram /> Instagram
-                  </a>
+                <div className="flex items-center gap-2">
+                  <FaMapMarkerAlt className="text-emerald-600" />
+                  <span>Zone 26, 850 Monsoura Street, Doha - Qatar</span>
                 </div>
               </div>
-              <div className="mt-3">
-                <p className="font-semibold">Services:</p>
-                <ul className="list-disc list-inside text-sm space-y-1">
-                  <li>Aluminium Fabrication & Installation</li>
-                  <li>Glass & Mirror Works</li>
-                  <li>Gypsum Partition & Ceiling</li>
-                  <li>Printing</li>
-                  <li>Parking Shade</li>
-                  <li>UPVC Doors & Windows</li>
-                  <li>MS Welding & Steel Fabrication</li>
-                  <li>Furniture & Upholstery</li>
+
+              <div className="flex gap-4 mt-4 text-sm">
+                <a
+                  href="https://www.facebook.com/share/1FrURQRnNv/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-emerald-600"
+                >
+                  <FaFacebook /> Facebook
+                </a>
+                <a
+                  href="https://www.instagram.com/qatar_plumber_123?igsh=ZTB2M2Q0MGxrYm0="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-emerald-600"
+                >
+                  <FaInstagram /> Instagram
+                </a>
+              </div>
+
+              <div className="mt-5">
+                <p className="font-semibold">Our Services:</p>
+                <ul className="list-disc list-inside text-sm space-y-1 text-gray-600 mt-2">
+                  <li>Plumbing Services</li>
+                  <li>Electrical Services</li>
+                  <li>Appliance Repairs</li>
+                  <li>General Maintenance</li>
                 </ul>
               </div>
             </div>

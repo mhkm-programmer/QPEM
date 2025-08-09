@@ -3,65 +3,63 @@ import PageTitle from "../pages/reusable/PageTitle";
 import ParallaxSection from "../pages/reusable/Parallax";
 import CustomerReviews from "../pages/Home/CustomerReviews";
 import Modal from "react-modal";
-import { FaCogs, FaUmbrellaBeach, FaRulerCombined, FaCertificate } from "react-icons/fa";
+import { FaCogs, FaLightbulb, FaRulerCombined, FaCertificate } from "react-icons/fa";
 
-const parkingShadeGallery = [
-  { type: "image", src: "https://8upload.com/image/688ab65a7257a/IMG-20250630-WA0108.jpg" },
-  { type: "image", src: "https://8upload.com/image/688ab65acaa5e/IMG-20250630-WA0109.jpg" },
-  { type: "image", src: "https://8upload.com/image/688ab65ae8a5f/IMG-20250630-WA0110.jpg" },
-  { type: "image", src: "https://8upload.com/image/688ab65b0f010/IMG-20250630-WA0111.jpg" },
-  { type: "image", src: "https://8upload.com/image/688ab65b35ea4/IMG-20250630-WA0114.jpg" },
-  { type: "image", src: "https://8upload.com/image/688ab65b45add/IMG-20250630-WA0115.jpg" },
+const aluminiumGallery = [
+  { type: "image", src: "https://8upload.com/image/688810e831f04/IMG-20250630-WA0036.jpg" },
+  { type: "image", src: "https://8upload.com/image/688810e7acd00/IMG-20250630-WA0007.jpg" },
+  { type: "image", src: "https://8upload.com/image/688810e765feb/IMG-20250630-WA0005.jpg" },
+  { type: "image", src: "https://8upload.com/image/688810e744611/IMG-20250630-WA0004.jpg" },
+  { type: "image", src: "https://8upload.com/image/688810e7237ee/IMG-20250630-WA0003.jpg" },
+  { type: "image", src: "https://8upload.com/image/688810e814f37/IMG-20250630-WA0010.jpg" },
 ];
+
 Modal.setAppElement('#root');
 
-const Parking = () => {
+const Appliance = () => {
   const [modalMedia, setModalMedia] = useState(null);
 
   return (
-    <div className="font-sans text-gray-800 dark:text-gray-100 bg-[#f8faf9] dark:bg-gray-900">
-      <PageTitle title="Parking Shade in Qatar | UV Protection & Stylish Canopies | Curtains Furniture" />
+    <div className="font-sans text-gray-800 dark:text-gray-100 bg-[#fdfbf9] dark:bg-gray-900">
+      <PageTitle title="Aluminium Works Qatar | Stylish & Durable Solutions | Curtains Furniture" />
 
       <ParallaxSection
-        imagePath="https://8upload.com/image/688ab65be0d73/IMG-20250630-WA0117.jpg"
-        title="Parking Shade Solutions"
-        subTitle="Reliable Coverage. Heat-Resistant Designs."
+        imagePath="https://8upload.com/image/68880f4ac8621/Alumi1-min.png"
+        title="Aluminium Works"
+        subTitle="Elegant. Strong. Long-Lasting."
       />
 
       <section className="max-w-6xl mx-auto px-6 py-16 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#2E4D3B] dark:text-white mb-6">
-          Shade That Protects & Lasts
+        <h2 className="text-4xl md:text-5xl font-bold text-[#4A342E] dark:text-white mb-6">
+          Premium Aluminium Solutions for Every Space
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          Our parking shades offer UV-resistant, weatherproof protection for residential, commercial, and public spaces. Custom fabricated in Qatar with premium steel, HDPE, and PVC materials.
+          From windows and doors to partitions and facades, our aluminium services blend design, durability, and precision. Perfect for residential, commercial, and industrial needs.
         </p>
       </section>
 
-      <section className="bg-[#eef5f1] dark:bg-gray-800 py-16 px-6">
+      <section className="bg-[#f5f0e8] dark:bg-gray-800 py-16 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
           {[
             {
-              icon: <FaRulerCombined size={36} className="mx-auto mb-4 text-[#3B6D52]" />,
-              title: "Custom Fit Structures",
-              desc: "We tailor each shade structure to your exact site measurements and layout.",
+              icon: <FaRulerCombined size={36} className="mx-auto mb-4 text-[#6B4226]" />,
+              title: "Custom Fabrication",
+              desc: "Tailored aluminium designs to fit any architectural style or specification.",
             },
             {
-              icon: <FaUmbrellaBeach size={36} className="mx-auto mb-4 text-[#3B6D52]" />,
-              title: "UV & Rain Protection",
-              desc: "Block harsh sunlight, reduce heat, and prevent water buildup with durable covers.",
+              icon: <FaLightbulb size={36} className="mx-auto mb-4 text-[#6B4226]" />,
+              title: "Modern Finishing",
+              desc: "Elegant powder-coated and anodized finishes with long-lasting color retention.",
             },
             {
-              icon: <FaCogs size={36} className="mx-auto mb-4 text-[#3B6D52]" />,
-              title: "Built to Endure",
-              desc: "Rust-resistant steel, reinforced stitching, and wind-tolerant designs for Qatar’s climate.",
+              icon: <FaCogs size={36} className="mx-auto mb-4 text-[#6B4226]" />,
+              title: "Precision Installation",
+              desc: "Expert onsite fitting ensuring seamless integration and maximum strength.",
             },
           ].map(({ icon, title, desc }, i) => (
-            <div
-              key={i}
-              className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow hover:shadow-lg transition"
-            >
+            <div key={i} className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow hover:shadow-lg transition">
               {icon}
-              <h3 className="text-xl font-semibold mb-2 text-[#2E4D3B] dark:text-white">{title}</h3>
+              <h3 className="text-xl font-semibold mb-2 text-[#4A342E] dark:text-white">{title}</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">{desc}</p>
             </div>
           ))}
@@ -69,31 +67,31 @@ const Parking = () => {
       </section>
 
       <section className="max-w-7xl mx-auto px-6 py-20">
-        <h3 className="text-3xl font-bold text-center text-[#2E4D3B] dark:text-white mb-8">
-          Recent Parking Shade Projects
+        <h3 className="text-3xl font-bold text-center text-[#4A342E] dark:text-white mb-8">
+          Project Gallery
         </h3>
         <p className="text-center text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
-          See how our parking solutions combine utility and modern design.
+          A showcase of our aluminium expertise across Qatar — precision-crafted and professionally installed.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {parkingShadeGallery.map((media, index) => (
+          {aluminiumGallery.map((media, index) => (
             <button
               key={index}
               onClick={() => setModalMedia(media)}
               className="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
-              aria-label={`Open media ${index + 1}`}
+              aria-label={`View media ${index + 1}`}
             >
               {media.type === "image" ? (
                 <img
                   src={media.src}
-                  alt={`Parking shade ${index + 1}`}
+                  alt={`Aluminium work ${index + 1}`}
                   className="w-full h-64 object-cover transform hover:scale-105 transition-all duration-500"
                 />
               ) : (
                 <div className="w-full h-64 bg-black overflow-hidden">
                   <iframe
                     src={media.src}
-                    title={`Parking shade video ${index + 1}`}
+                    title={`Video ${index + 1}`}
                     className="w-full h-full object-cover"
                     frameBorder="0"
                     allow="autoplay; fullscreen"
@@ -146,31 +144,31 @@ const Parking = () => {
 
       <CustomerReviews />
 
-      <section className="py-20 px-6 bg-[#e5f0ea] dark:bg-gray-800">
+      <section className="py-20 px-6 bg-[#f2ede8] dark:bg-gray-800">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-[#2E4D3B] dark:text-white mb-6">
-            Why Choose Our Parking Shades?
+          <h2 className="text-3xl font-bold text-[#4A342E] dark:text-white mb-6">
+            Why Choose Our Aluminium Works?
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
-            Trusted across Qatar for smart design, durable materials, and expert installation.
+            Quality materials. Skilled technicians. Trusted by clients across Qatar for reliable aluminium solutions.
           </p>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { title: "Free Site Visit", desc: "We assess your site for optimal shade placement and coverage." },
-              { title: "Qatar-Ready Materials", desc: "Made for high heat, dust, and UV conditions using tested fabrics." },
-              { title: "Steel Fabrication Experts", desc: "Our welders and engineers custom build each frame in-house." },
+              { title: "Free Site Visit", desc: "We assess your site and suggest the best aluminium options for your needs." },
+              { title: "Fast Turnaround", desc: "From design to installation — we deliver quickly without compromising quality." },
+              { title: "Value Pricing", desc: "Get top-grade aluminium work at competitive rates for any size of project." },
             ].map(({ title, desc }, i) => (
               <div key={i} className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow">
-                <h3 className="font-semibold text-lg text-[#3B6D52] dark:text-white mb-2">{title}</h3>
+                <h3 className="font-semibold text-lg text-[#6B4226] dark:text-white mb-2">{title}</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{desc}</p>
               </div>
             ))}
             <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow flex items-center gap-3">
-              <FaCertificate className="text-[#3B6D52]" size={24} />
+              <FaCertificate className="text-[#6B4226]" size={24} />
               <div>
-                <h3 className="font-semibold text-lg text-[#3B6D52] dark:text-white">Warranty & Standards</h3>
+                <h3 className="font-semibold text-lg text-[#6B4226] dark:text-white">Certified Materials</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Our structures comply with GCC shading standards and come with material warranty.
+                  All aluminium profiles and accessories comply with international quality standards.
                 </p>
               </div>
             </div>
@@ -178,16 +176,16 @@ const Parking = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-[#2E4D3B] text-white text-center px-6">
+      <section className="py-20 bg-[#4A342E] text-white text-center px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Need Reliable Shade for Your Parking Area?
+          Transform Your Space with Precision Aluminium
         </h2>
         <p className="text-lg mb-6 max-w-xl mx-auto">
-          Message us now to get a site survey, design proposal, and quote anywhere in Qatar.
+          Get a free consultation and quotation from our experts — serving all locations across Qatar.
         </p>
         <a
           href="https://wa.me/97466280037"
-          className="inline-block bg-white text-[#2E4D3B] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-gray-100 transition"
+          className="inline-block bg-white text-[#4A342E] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-gray-100 transition"
         >
           Chat on WhatsApp
         </a>
@@ -196,4 +194,4 @@ const Parking = () => {
   );
 };
 
-export default Parking;
+export default Appliance;

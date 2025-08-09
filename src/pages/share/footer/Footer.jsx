@@ -5,41 +5,47 @@ import {
   FaInstagram,
   FaMapMarkerAlt,
   FaEnvelope,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 text-sm">
+    <footer className="bg-[#0C1E3B] text-gray-300 text-sm font-sans">
       <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Company Info */}
         <div>
-          <h2 className="text-xl font-semibold text-white mb-2">
-            F L M SUPER TRADING AND CONTRACTING
+          <h2 className="text-2xl font-bold text-white mb-3">
+            Qatar Plumbing, Electrical & Maintenance
           </h2>
-          <p className="mb-1 text-gray-400">
-            الاسم بالعربية: اف ال ام سوبر ترادينغ اند كونتراكتينغ
+          <p className="mb-3 text-gray-400">
+            Trusted plumbing, electrical, and maintenance solutions for homes and businesses across Qatar.
           </p>
-          <p className="mb-1 text-gray-400">CR No: 212381</p>
-          <p className="mb-1 text-gray-400">Rokcha No: 289601</p>
-          <p className="mb-1 text-gray-400">
-            Location: Zone 26, Street 850, Building 45, Flat 2, Apartment No 5,
-            Doha, Qatar
+          <p className="mb-2 text-gray-400">
+            <FaMapMarkerAlt className="inline mr-2 text-yellow-400" />
+            Zone 26, 850 Monsoura Street, Doha - Qatar
           </p>
-          <p className="mb-1 text-gray-400">
-            Email:{" "}
+          <p className="mb-2 text-gray-400">
+            <FaEnvelope className="inline mr-2 text-yellow-400" />
             <a
-              href="mailto:mobarakhossain23456@gmail.com"
+              href="mailto:info.qpem@gmail.com"
               className="hover:text-yellow-400 underline"
             >
-              mobarakhossain23456@gmail.com
+              info.qpem@gmail.com
             </a>
           </p>
-          <p className="text-gray-400">Phone: +974 3160 2956</p>
+          <p className="mb-2 text-gray-400">
+            <FaPhoneAlt className="inline mr-2 text-yellow-400" />
+            +974 7718 8527
+          </p>
+          <p className="mb-2 text-gray-400">
+            <FaWhatsapp className="inline mr-2 text-green-400" />
+            WhatsApp: +974 7718 8527
+          </p>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-3">Quick Links</h3>
+          <h3 className="text-xl font-semibold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
               <NavLink to="/" className="hover:text-yellow-400 transition">
@@ -51,8 +57,6 @@ const Footer = () => {
                 Our Services
               </NavLink>
             </li>
-            
-            
             <li>
               <NavLink to="/contact" className="hover:text-yellow-400 transition">
                 Contact Us
@@ -63,97 +67,78 @@ const Footer = () => {
 
         {/* Services */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-3">Our Services</h3>
+          <h3 className="text-xl font-semibold text-white mb-4">Our Services</h3>
           <ul className="space-y-2">
             <li>
-              <NavLink to="/services/aluminium" className="hover:text-yellow-400 transition">
-                Aluminium Fabrication & Installation
-              </NavLink>
-            </li>
-             <li>
-              <NavLink to="/services/upvc" className="hover:text-yellow-400 transition">
-                UPVC Doors & Windows
+              <NavLink to="/services/plumbing" className="hover:text-yellow-400 transition">
+                Plumbing Services
               </NavLink>
             </li>
             <li>
-              <NavLink to="/services/glass" className="hover:text-yellow-400 transition">
-                Glass & Mirror Works
+              <NavLink to="/services/electrical" className="hover:text-yellow-400 transition">
+                Electrical Services
               </NavLink>
             </li>
             <li>
-              <NavLink to="/furniture" className="hover:text-yellow-400 transition">
-                Furniture & Upholstery
+              <NavLink to="/services/appliance-repairs" className="hover:text-yellow-400 transition">
+                Appliance Repairs
               </NavLink>
             </li>
             <li>
-              <NavLink to="/services/gypsumCeilings" className="hover:text-yellow-400 transition">
-                Gypsum Partition & Ceiling
+              <NavLink to="/services/maintenance" className="hover:text-yellow-400 transition">
+                General Maintenance
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/services/printing" className="hover:text-yellow-400 transition">
-                Printing
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/services/parking" className="hover:text-yellow-400 transition">
-                Parking Shade
-              </NavLink>
-            </li>
-           
-            <li>
-              <NavLink to="/services/ms_fabrication" className="hover:text-yellow-400 transition">
-                MS Welding & Steel Fabrication
-              </NavLink>
-            </li>
-            
           </ul>
         </div>
       </div>
 
-      {/* Bottom Section */}
-      <div className="border-t border-gray-700 mt-8 pt-5 pb-6 px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400">
+      {/* Social + Bottom Row */}
+      <div className="border-t border-gray-700 mt-8 pt-6 pb-6 px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <div className="flex items-center gap-2">
             <FaPhoneAlt className="text-yellow-400" />
-            <span>+974 3160 2956</span>
+            <span>+974 7718 8527</span>
           </div>
           <div className="flex items-center gap-2">
             <FaEnvelope className="text-yellow-400" />
-            <span>mobarakhossain23456@gmail.com</span>
+            <span>info.qpem@gmail.com</span>
           </div>
         </div>
-        <div className="flex items-center gap-2">
-          <FaMapMarkerAlt className="text-yellow-400" />
-          <span>
-            Zone 26, Street 850, Building 45, Flat 2, Apartment No 5, Doha,
-            Qatar
-          </span>
-        </div>
-        <div className="flex items-center gap-4">
+
+        <div className="flex items-center gap-5 text-lg">
           <a
-            href="https://www.facebook.com/share/1Ez4QhtfFn/"
+            href="https://www.facebook.com/share/1FrURQRnNv/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
-            className="hover:text-yellow-400 transition"
+            className="hover:text-blue-500 transition"
           >
             <FaFacebookF />
           </a>
           <a
-            href="https://www.instagram.com/mobarakmunna/profilecard/?igsh=MXYwMXdhdDhqNnRjOQ=="
+            href="https://www.instagram.com/qatar_plumber_123?igsh=ZTB2M2Q0MGxrYm0="
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className="hover:text-yellow-400 transition"
+            className="hover:text-pink-500 transition"
           >
             <FaInstagram />
+          </a>
+          <a
+            href="https://wa.me/97477188527"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+            className="hover:text-green-400 transition"
+          >
+            <FaWhatsapp />
           </a>
         </div>
       </div>
 
       <div className="text-center py-4 text-xs text-gray-500">
-        © {new Date().getFullYear()} F L M SUPER TRADING AND CONTRACTING. All rights reserved.
+        © {new Date().getFullYear()} Qatar Plumbing, Electrical & Maintenance. All rights reserved.
       </div>
     </footer>
   );

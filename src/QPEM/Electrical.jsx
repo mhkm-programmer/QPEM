@@ -16,7 +16,7 @@ const aluminiumGallery = [
 
 Modal.setAppElement('#root');
 
-const Aluminium = () => {
+const Electrical = () => {
   const [modalMedia, setModalMedia] = useState(null);
 
   return (
@@ -194,4 +194,4 @@ const Aluminium = () => {
   );
 };
 
-export default Aluminium;
+export default Electrical;
